@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{a}}</title>
+    <!--使用CSS樣式-->
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Site：{{a}}</h1> <!--接收路由變數，屬jinja語言-->
+    {% if d %} <!--判斷是否顯示subtitle變數-->
+    <h2>{{b}}</h2>
+    {% endif %}
+   <p>name：{{c.name}} </p><!--字典應用，範例1-->
+   <p>email：{{c.email}} </p>
+   <p>phone：{{c["phone"]}} </p><!--字典應用，範例2-->
+   <a href="mailto:{{c.email}}"> {{c.email}} </a>
+   <br>
+   <h3>user list</h3>
+   <ul>
+       <!--迴圈產出串列值-->
+       {% for user in e %}
+        <li> 
+            <a href="/user/{{ loop.index0 }}">
+                name：{{user.name}}
+            </a>
+            ，age：{{user.age}}
+            {#判斷VIP#}
+            {% if user.is_vip %}
+               <span class="badge">is VIP</span> 
+            {% endif %}
+        </li>  
+        {% endfor %}
+   </ul>
+</body>
+</html>

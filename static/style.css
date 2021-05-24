@@ -1,0 +1,8 @@
+.badge{
+    /*背景顏色*/
+    background: rebeccapurple;
+    /*留白*/
+    padding: 1px 10px;
+    /*圓角*/
+    border-radius: 8px; 
+}
