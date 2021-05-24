@@ -1,4 +1,3 @@
-parsel=1.6.0
 parso=0.7.0
 partd=1.2.0
 path=15.1.2
