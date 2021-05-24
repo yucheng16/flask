@@ -1,2 +1,8 @@
 Flask==1.1.2
+gunicorn==20.1.0
 Flask-WTF==0.14.3
+Jinja2==2.11.3
+Werkzeug==2.0.1
+distributed==2021.4.0
+gunicorn==0.14.2
+requests==2.25.1
